@@ -39,6 +39,7 @@ ENV/
 data/*.json
 data/*.md
 !data/.gitkeep
+data/vector_store/
 
 # Logs
 *.log

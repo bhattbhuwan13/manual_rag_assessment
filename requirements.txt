@@ -1,2 +1,7 @@
 firecrawl
-python-dotenv 
+python-dotenv
+langchain
+langchain-openai
+lancedb
+python-magic
+tiktoken 
