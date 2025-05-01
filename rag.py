@@ -32,7 +32,7 @@ def setup_rag_pipeline():
         openai_api_key=os.getenv('OPENAI_API_KEY')
     )
     
-    # Create a custom prompt template
+    # Create a custom prompt template, explain this in readme
     template = """You are a helpful assistant for Voy's help center. Use the following pieces of context to answer the question at the end. 
     If you don't know the answer, just say that you don't know, don't try to make up an answer.
     Always provide a clear and concise answer based on the context provided.
