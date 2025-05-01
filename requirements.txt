@@ -1,6 +1,7 @@
 firecrawl
 python-dotenv
 langchain
+langchain-community
 langchain-openai
 lancedb
 python-magic
