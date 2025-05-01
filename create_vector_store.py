@@ -15,7 +15,7 @@ def create_vector_store():
     # Initialize OpenAI embeddings
     embeddings = OpenAIEmbeddings(
         openai_api_key=os.getenv('OPENAI_API_KEY'),
-        # model="text-embedding-3-small"  # Using the correct embedding model
+        # model="text-embedding-3-small"  
     )
     
     # Initialize LanceDB
