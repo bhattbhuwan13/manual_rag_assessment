@@ -1,3 +1,9 @@
+import sys
+import warnings
+if not sys.warnoptions:
+    warnings.simplefilter("ignore")
+    os.environ["PYTHONWARNINGS"] = "ignore"
+
 import os
 from pathlib import Path
 import lancedb

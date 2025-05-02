@@ -1,4 +1,10 @@
+import sys
 import os
+import warnings
+if not sys.warnoptions:
+    warnings.simplefilter("ignore")
+    os.environ["PYTHONWARNINGS"] = "ignore"
+
 import lancedb
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_community.vectorstores import LanceDB
@@ -6,7 +12,6 @@ from langchain.chains import RetrievalQA, LLMChain
 from langchain.prompts import PromptTemplate
 from dotenv import load_dotenv
 
-import sys
 # Load environment variables
 load_dotenv()
 
