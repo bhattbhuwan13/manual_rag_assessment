@@ -43,9 +43,9 @@ class MedicalLLMEvaluator:
             "consistency_metrics": {},
         }
         
-        # # 1. Evaluate hallucination rate with self-reflection
-        # hallucination_results = self.evaluate_hallucination(test_queries)
-        # results["hallucination_metrics"] = hallucination_results
+        # 1. Evaluate hallucination rate with self-reflection
+        hallucination_results = self.evaluate_hallucination(test_queries)
+        results["hallucination_metrics"] = hallucination_results
         
         # 2. Evaluate consistency using semantically equivalent queries
         consistency_results = self.evaluate_consistency(test_queries)
@@ -85,7 +85,7 @@ class MedicalLLMEvaluator:
                 Context: {context}
                 Response: {response}
                 
-                List any unsupported claims or hallucinations:
+                List any unsupported claims or hallucinations. If there are no unsupported claims, output "no unsupported claims":
             """
             )
             
