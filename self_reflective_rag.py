@@ -6,6 +6,7 @@ from langchain.chains import RetrievalQA, LLMChain
 from langchain.prompts import PromptTemplate
 from dotenv import load_dotenv
 
+import sys
 # Load environment variables
 load_dotenv()
 
@@ -31,6 +32,21 @@ def setup_rag_pipeline():
         temperature=0,
         openai_api_key=os.getenv('OPENAI_API_KEY')
     )
+
+    # Create a custom prompt template, explain this in readme
+    template = """
+    You are a helpful assistant for Voy's help center. Use the following pieces of context to answer the question at the end. 
+    If you don't know the answer, just say "unsupported", don't try to make up an answer.
+    Always provide a clear and concise answer based on the context provided. If unsure, say "I'm not sure based on the information I have."
+    
+    Context: {context}
+    
+    Question: {question}
+    
+    Helpful Answer:
+    """
+    
+    QA_CHAIN_PROMPT = PromptTemplate.from_template(template)
     
     # Create the QA chain
     qa_chain = RetrievalQA.from_chain_type(
@@ -38,6 +54,7 @@ def setup_rag_pipeline():
         retriever=vector_store.as_retriever(
             search_kwargs={"k": 3}  # Retrieve top 3 most relevant documents
         ),
+        chain_type_kwargs={"prompt": QA_CHAIN_PROMPT},
         return_source_documents=True
     )
     
@@ -45,9 +62,10 @@ def setup_rag_pipeline():
     reflection_template = """
     You are a Voy help center information verifier. Your task is to:
     1. Compare the generated response with the retrieved context
-    2. Identify any statements in the response that are unsupported by the context
-    3. Flag potential hallucinations or factual errors
-    4. Suggest improvements to make the answer more accurate and helpful
+    2. If statements in the response  are supported by the context stop the rest of the steps. 
+    3. If the statements in the response are not supported by the context, simply output "unsupported" and stop.
+    3. Compare the context and generated response. If and only if you find factual errors or hallucinations, simply output "hallucinations" and stop.
+    4. If the document in the context can be used to make improvements to the answer more accurate and helpful, suggest improvements.
 
     Retrieved Context:
     {context}
@@ -68,13 +86,39 @@ def setup_rag_pipeline():
     return qa_chain, reflection_chain, vector_store, llm
 
 def self_reflective_rag(query, qa_chain, reflection_chain, vector_store, llm):
+
+
+    # for doc in result["source_documents"]:
+    #             print(f"- {doc.metadata['source']}")
     # Get initial response and context
     result = qa_chain({"query": query})
+    print("#"*100)
+    print("Initial Result")
+    
     initial_response = result["result"]
-    context = "\n\n".join([doc.page_content for doc in result["source_documents"]])
+
+    print(initial_response)
+    print(result["source_documents"])
+    print("#"*100)
+    context = "\n\n".join([doc.metadata['source'] for doc in result["source_documents"]])
+
+    print("*"*100)
+
+    print("Context")
+
+    print(context)
+    print("*"*100)
     
     # Self-reflection for hallucination detection
     verification = reflection_chain.run(context=context, response=initial_response)
+    print("#"*100)
+    print("Verification Result")
+    print(verification)
+    print("#"*100)
+    verification_result = verification
+    
+    print(verification_result)
+    print("#"*100)
     
     # Revision based on verification results
     if "hallucination" in verification.lower() or "unsupported" in verification.lower():
@@ -83,9 +127,9 @@ def self_reflective_rag(query, qa_chain, reflection_chain, vector_store, llm):
         
         Verification Results: {verification}
         
-        Please revise the response to remove any unsupported claims or hallucinations,
-        using only information from the context. If you cannot provide a complete answer
-        with the available context, clearly state the limitations.
+        If necessary, please revise the response to remove any unsupported claims or hallucinations,
+        using only information from the context. If available context cannot help you create
+        better answer, simply output "Can't help you with this. Please contact a human" and stop.
         
         Context: {context}
         
@@ -134,3 +178,8 @@ def main():
 
 if __name__ == "__main__":
     main() 
+
+
+"""
+Notes: Currently the relevancy of the documents is only determined using the title of the document.
+"""
