@@ -33,15 +33,17 @@ def setup_rag_pipeline():
     )
     
     # Create a custom prompt template, explain this in readme
-    template = """You are a helpful assistant for Voy's help center. Use the following pieces of context to answer the question at the end. 
+    template = """
+    You are a helpful assistant for Voy's help center. Use the following pieces of context to answer the question at the end. 
     If you don't know the answer, just say that you don't know, don't try to make up an answer.
-    Always provide a clear and concise answer based on the context provided.
+    Always provide a clear and concise answer based on the context provided. If unsure, say "I'm not sure based on the information I have."
     
     Context: {context}
     
     Question: {question}
     
-    Helpful Answer:"""
+    Helpful Answer:
+    """
     
     QA_CHAIN_PROMPT = PromptTemplate.from_template(template)
     
