@@ -6,12 +6,12 @@ A Retrieval-Augmented Generation (RAG) system for Voy's help center, built using
 
 ### When the system knows the answer
 
-![Knows the answer](knows_answer.png)
+![Knows the answer](./images/knows_answer.png)
 *The RAG system provides a confident, supported answer with sources.*
 
 ### When the system does not know the answer
 
-![No answer](no_answer.png)
+![No answer](./images/no_answer.png)
 *The RAG system declines to answer questions that can't be answered using the knowledge base (vector store) and suggests contacting a human.*
 
 ## Project Structure
