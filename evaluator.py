@@ -29,11 +29,10 @@ class MedicalLLMEvaluator:
         
     def evaluate_comprehensive(self, test_queries):
         """
-        Hallucinations and consistency evaluation
+        Hallucinations and consistency evaluator
         
         Args:
             test_queries: List of medical queries to evaluate
-            experts: Optional list of expert evaluators (functions that rate responses)
             
         Returns:
             Evaluation results across multiple dimensions
@@ -104,7 +103,7 @@ class MedicalLLMEvaluator:
         }
     
     def evaluate_consistency(self, test_queries, variations_per_query=3):
-        """Evaluate consistency across semantically equivalent query variations"""
+        """Evaluate consistency across semantically similar documents"""
         consistency_scores = []
         
         for query in test_queries[:10]:  # Limit to 10 queries for efficiency
@@ -158,7 +157,7 @@ class MedicalLLMEvaluator:
         }
     
     def semantic_similarity(self, text1, text2):
-        """Calculate semantic similarity between two texts"""
+        """Calculate semantic similarity between two documents"""
         # Using LLM to rate similarity
         similarity_prompt = f"""
         On a scale of 0 to 1, rate how semantically similar these two medical responses are
