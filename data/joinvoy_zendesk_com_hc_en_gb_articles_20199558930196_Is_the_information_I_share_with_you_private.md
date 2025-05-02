@@ -1,0 +1,13 @@
+[Skip to main content](https://joinvoy.zendesk.com/hc/en-gb/articles/20199558930196-Is-the-information-I-share-with-you-private#main-content)
+
+Yes, we take your privacy and security information very seriously. We have designed the platform to comply with all the relevant privacy laws and have implemented security protocols to protect your personal information.
+
+Please read our Privacy Policy for more information.
+
+## Related articles
+
+- [How does the approval process work?](https://joinvoy.zendesk.com/hc/en-gb/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCJT3rNxhFjoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCBTfiBNfEjoLbG9jYWxlSSIKZW4tZ2IGOgZFVDoIdXJsSSJJL2hjL2VuLWdiL2FydGljbGVzLzI0NjA5NTY5OTYxODc2LUhvdy1kb2VzLXRoZS1hcHByb3ZhbC1wcm9jZXNzLXdvcmsGOwhUOglyYW5raQY%3D--256da266456229a893462550fcac4e41eb46a3a7)
+- [Can I use a prescription from my own GP on your website?](https://joinvoy.zendesk.com/hc/en-gb/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCJTh9EtYEjoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCBTfiBNfEjoLbG9jYWxlSSIKZW4tZ2IGOgZFVDoIdXJsSSJeL2hjL2VuLWdiL2FydGljbGVzLzIwMTcwNDQwNzYxNzQ4LUNhbi1JLXVzZS1hLXByZXNjcmlwdGlvbi1mcm9tLW15LW93bi1HUC1vbi15b3VyLXdlYnNpdGUGOwhUOglyYW5raQc%3D--6806a8f3ee539ab316737e9715a76e604e411951)
+- [How do I upload photos?](https://joinvoy.zendesk.com/hc/en-gb/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCBQk7AwCHToYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCBTfiBNfEjoLbG9jYWxlSSIKZW4tZ2IGOgZFVDoIdXJsSSI9L2hjL2VuLWdiL2FydGljbGVzLzMxODk0NjQzOTQyNDIwLUhvdy1kby1JLXVwbG9hZC1waG90b3MGOwhUOglyYW5raQg%3D--2036fda2982b87c1245adbc5bf2e0b92562b6c9e)
+- [How do payments work?](https://joinvoy.zendesk.com/hc/en-gb/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCBRywm9tHDoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCBTfiBNfEjoLbG9jYWxlSSIKZW4tZ2IGOgZFVDoIdXJsSSI7L2hjL2VuLWdiL2FydGljbGVzLzMxMjU2MzUyMDI3MTU2LUhvdy1kby1wYXltZW50cy13b3JrBjsIVDoJcmFua2kJ--2f86b38f754fa985b802895d0b034c1c8dcf9a62)
+- [How does my subscription work?](https://joinvoy.zendesk.com/hc/en-gb/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCBQaY%2FfoFToYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCBTfiBNfEjoLbG9jYWxlSSIKZW4tZ2IGOgZFVDoIdXJsSSJEL2hjL2VuLWdiL2FydGljbGVzLzI0MDkwMzI3MDYzMDYwLUhvdy1kb2VzLW15LXN1YnNjcmlwdGlvbi13b3JrBjsIVDoJcmFua2kK--99b2ecab5c3ba1f75d37712b00ab9dbdb1a205f5)

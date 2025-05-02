@@ -1,0 +1,15 @@
+[Skip to main content](https://joinvoy.zendesk.com/hc/en-gb/articles/20167996852628-Is-this-a-safe-and-effective-way-to-manage-weight-loss#main-content)
+
+Absolutely! GLP-1 medications, when used alongside our expert coaching, have consistently demonstrated impressive results in helping individuals reach their goals. Within the initial six months of treatment, people have achieved weight loss of up to 10%.
+
+Moreover, you can rest assured that your journey towards better health is not just effective but also safe. These medications, when prescribed and monitored by our medical experts, are generally well-tolerated.
+
+Our medical team is committed to guiding and overseeing your treatment to ensure your safety and success. So, you're not alone on this path to achieving your goals.
+
+## Related articles
+
+- [How does the Voy weight loss programme work?](https://joinvoy.zendesk.com/hc/en-gb/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCJQQDdI%2FEjoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCJTJSbpXEjoLbG9jYWxlSSIKZW4tZ2IGOgZFVDoIdXJsSSJSL2hjL2VuLWdiL2FydGljbGVzLzIwMDY1MzE2MzExMTg4LUhvdy1kb2VzLXRoZS1Wb3ktd2VpZ2h0LWxvc3MtcHJvZ3JhbW1lLXdvcmsGOwhUOglyYW5raQY%3D--f84d7447090555a52bb6e799c749d64dfeeaf52e)
+- [Are there any medical conditions that might disqualify someone from participating?](https://joinvoy.zendesk.com/hc/en-gb/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCJT8%2BENeEjoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCJTJSbpXEjoLbG9jYWxlSSIKZW4tZ2IGOgZFVDoIdXJsSSJ4L2hjL2VuLWdiL2FydGljbGVzLzIwMTk2MDc2NjE2ODUyLUFyZS10aGVyZS1hbnktbWVkaWNhbC1jb25kaXRpb25zLXRoYXQtbWlnaHQtZGlzcXVhbGlmeS1zb21lb25lLWZyb20tcGFydGljaXBhdGluZwY7CFQ6CXJhbmtpBw%3D%3D--aae950c5bc29d2545c5e7d2b598e5d92dcc9ac7e)
+- [Can I restart my susbcription at a higher dosage?](https://joinvoy.zendesk.com/hc/en-gb/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCBQudbR6FToYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCJTJSbpXEjoLbG9jYWxlSSIKZW4tZ2IGOgZFVDoIdXJsSSJXL2hjL2VuLWdiL2FydGljbGVzLzIzNjE2NzU3NzcxNzk2LUNhbi1JLXJlc3RhcnQtbXktc3VzYmNyaXB0aW9uLWF0LWEtaGlnaGVyLWRvc2FnZQY7CFQ6CXJhbmtpCA%3D%3D--0f59bf5541c57456895fdb2ef617ac8d78f89e33)
+- [Why doesn’t VOY mention prescription medications by name?](https://joinvoy.zendesk.com/hc/en-gb/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCBRDzLxXEjoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCJTJSbpXEjoLbG9jYWxlSSIKZW4tZ2IGOgZFVDoIdXJsSSJfL2hjL2VuLWdiL2FydGljbGVzLzIwMTY4MDM4OTU3ODQ0LVdoeS1kb2Vzbi10LVZPWS1tZW50aW9uLXByZXNjcmlwdGlvbi1tZWRpY2F0aW9ucy1ieS1uYW1lBjsIVDoJcmFua2kJ--96f37b23e742e703ecdb09723bb86dab019ff712)
+- [How does the approval process work?](https://joinvoy.zendesk.com/hc/en-gb/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCJT3rNxhFjoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCJTJSbpXEjoLbG9jYWxlSSIKZW4tZ2IGOgZFVDoIdXJsSSJJL2hjL2VuLWdiL2FydGljbGVzLzI0NjA5NTY5OTYxODc2LUhvdy1kb2VzLXRoZS1hcHByb3ZhbC1wcm9jZXNzLXdvcmsGOwhUOglyYW5raQo%3D--e899441980e0aaecbd07e0fe91b027db5a042464)
