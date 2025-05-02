@@ -92,29 +92,29 @@ def self_reflective_rag(query, qa_chain, reflection_chain, vector_store, llm):
     #             print(f"- {doc.metadata['source']}")
     # Get initial response and context
     result = qa_chain({"query": query})
-    print("#"*100)
-    print("Initial Result")
+    # print("#"*100)
+    # print("Initial Result")
     
     initial_response = result["result"]
 
-    print(initial_response)
-    print(result["source_documents"])
-    print("#"*100)
+    # print(initial_response)
+    # print(result["source_documents"])
+    # print("#"*100)
     context = "\n\n".join([doc.metadata['source'] for doc in result["source_documents"]])
 
-    print("*"*100)
+    # print("*"*100)
 
-    print("Context")
+    # print("Context")
 
-    print(context)
-    print("*"*100)
+    # print(context)
+    # print("*"*100)
     
     # Self-reflection for hallucination detection
     verification = reflection_chain.run(context=context, response=initial_response)
-    print("#"*100)
-    print("Verification Result")
-    print(verification)
-    print("#"*100)
+    # print("#"*100)
+    # print("Verification Result")
+    # print(verification)
+    # print("#"*100)
     verification_result = verification
     
     print(verification_result)
