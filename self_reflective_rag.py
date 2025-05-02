@@ -88,8 +88,6 @@ def setup_rag_pipeline():
 def self_reflective_rag(query, qa_chain, reflection_chain, vector_store, llm):
 
 
-    # for doc in result["source_documents"]:
-    #             print(f"- {doc.metadata['source']}")
     # Get initial response and context
     result = qa_chain({"query": query})
     # print("#"*100)
@@ -97,7 +95,7 @@ def self_reflective_rag(query, qa_chain, reflection_chain, vector_store, llm):
     
     initial_response = result["result"]
 
-    # print(initial_response)
+    print(initial_response)
     # print(result["source_documents"])
     # print("#"*100)
     context = "\n\n".join([doc.metadata['source'] for doc in result["source_documents"]])

@@ -1,17 +1,35 @@
 import openai
 import numpy as np
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 import json
+import os
+import lancedb
+from langchain_community.vectorstores import LanceDB
+from dotenv import load_dotenv
+import sys
+
+from self_reflective_rag import setup_rag_pipeline, self_reflective_rag
+load_dotenv()
 
 class MedicalLLMEvaluator:
-    def __init__(self, model_name="gpt-4", documents_path="medical_faqs.txt"):
-        self.model_name = model_name
-        self.vector_store = create_vector_store(documents_path)
-        self.llm = ChatOpenAI(temperature=0, model=model_name)
+    def __init__(self, vector_store, model_name="gpt-4"):
+        self.model_name = model_name # Gpt-4 is a better model than gpt-3.5-turbo for prediction
+        # self.vector_store = create_vector_store(documents_path)
+        self.llm = ChatOpenAI(temperature=0, model=model_name, openai_api_key=os.getenv('OPENAI_API_KEY'))
+        embeddings = OpenAIEmbeddings(
+            openai_api_key=os.getenv('OPENAI_API_KEY')
+            )
+        # Connect to LanceDB
+        db = lancedb.connect("data/vector_store")
         
-    def evaluate_comprehensive(self, test_queries, ground_truth=None, experts=None):
+        # Load the vector store
+        self.vector_store = vector_store
+        # print(self.llm, embeddings, db, self.vector_store)
+        
+    def evaluate_comprehensive(self, test_queries):
         """
-        Comprehensive evaluation using multiple strategies
+        Hallucinations and consistency evaluation
         
         Args:
             test_queries: List of medical queries to evaluate
@@ -23,27 +41,16 @@ class MedicalLLMEvaluator:
         results = {
             "hallucination_metrics": {},
             "consistency_metrics": {},
-            "expert_ratings": {},
-            "benchmark_metrics": {}
         }
         
-        # 1. Evaluate hallucination rate with self-reflection
-        hallucination_results = self.evaluate_hallucination(test_queries)
-        results["hallucination_metrics"] = hallucination_results
+        # # 1. Evaluate hallucination rate with self-reflection
+        # hallucination_results = self.evaluate_hallucination(test_queries)
+        # results["hallucination_metrics"] = hallucination_results
         
         # 2. Evaluate consistency using semantically equivalent queries
         consistency_results = self.evaluate_consistency(test_queries)
         results["consistency_metrics"] = consistency_results
-        
-        # 3. Benchmark evaluation if ground truth is available
-        if ground_truth:
-            benchmark_results = self.evaluate_benchmark(test_queries, ground_truth)
-            results["benchmark_metrics"] = benchmark_results
-        
-        # 4. Expert evaluation if provided
-        if experts:
-            expert_results = self.evaluate_with_experts(test_queries, experts)
-            results["expert_ratings"] = expert_results
+
             
         return results
     
@@ -123,12 +130,15 @@ class MedicalLLMEvaluator:
                 variations = [query] + [query + f" (rephrased version {i})" for i in range(variations_per_query-1)]
             
             # Get responses for all variations
+            qa_chain, reflection_chain, vector_store, llm = setup_rag_pipeline()
             responses = []
             for var in variations:
-                resp = self_reflective_rag(var)
+                resp, _ = self_reflective_rag(query, qa_chain, reflection_chain, vector_store, llm)
+                # resp, _ = self_reflective_rag(var)
                 responses.append(resp)
             
             # Check consistency across responses
+            
             pairwise_similarities = []
             for i in range(len(responses)):
                 for j in range(i+1, len(responses)):
@@ -167,31 +177,20 @@ class MedicalLLMEvaluator:
         except:
             return 0.5  # Default if parsing fails
     
-    
-    
-    def extract_classification(self, response):
-        """Extract classification answer from model response"""
-        extraction_prompt = f"""
-        Extract the core answer/classification from this medical response:
-        
-        {response}
-        
-        Output the answer class or category only:
-        """
-        
-        extracted = self.llm.predict(extraction_prompt).strip()
-        return extracted
-    
+
     
 
-# Example usage
-evaluator = MedicalLLMEvaluator()
+_, _, vector_store, _ = setup_rag_pipeline()
+evaluator = MedicalLLMEvaluator(vector_store=vector_store)
+# sys.exit()
 test_queries = [
     "What are the symptoms of COVID-19?",
-    "How is diabetes treated?",
-    "What medications should be avoided during pregnancy?"
-    # Add more test queries
+    "What is Voy?",
+    "What medications should be avoided during weight loss?"
 ]
 
+results = evaluator.evaluate_comprehensive(test_queries)
+# print(results)
 
-print(json.dumps(evaluation_results, indent=2))
+
+print(json.dumps(results, indent=2))
